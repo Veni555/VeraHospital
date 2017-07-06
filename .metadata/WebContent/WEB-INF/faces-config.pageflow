@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14982035178751" configfile="/VeraHospital/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="pages/updatePatient.xhtml" x="338" y="646" id="pf14992806825770" referenceLink="//@navigationRule.21/@navigationCase.0/@toViewId|" outlinks="pf14992806825771 pf14992806825772 pf14992806825773 pf14992806825774" inlinks="pf14992806825775 pf14992806825776 pf14992806825777" path="/pages/updatePatient.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/meinePatienten.xhtml" x="986" y="604" id="pf14992806825778" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" outlinks="pf14992806825779 pf149928068257710 pf149928068257711 pf14992806825777" inlinks="pf14992806825771 pf149928068257712 pf149928068257713 pf149928068257714 pf149928068257715" path="/pages/meinePatienten.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/login.xhtml" x="770" y="381" id="pf149928068257717" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf149928068257712 pf149928068257718 pf149928074325028" inlinks="pf14992806825779 pf14992806825772 pf149928068257719 pf149928068257720 pf149928068257721" path="/pages/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/registrierung.xhtml" x="338" y="178" id="pf149928068257722" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" outlinks="pf149928068257713 pf149928068257719 pf149928068257723" inlinks="pf149928074325028" path="/pages/registrierung.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/aerzte.xhtml" x="554" y="444" id="pf149928068257724" referenceLink="//@navigationRule.19/@navigationCase.0/@toViewId|" outlinks="pf149928068257714 pf149928068257725 pf14992806825775 pf149928068257721" inlinks="pf149928068257710 pf149928068257723 pf14992806825774 pf149928068257726 pf149928068257718" path="/pages/aerzte.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/newPatient.xhtml" x="122" y="601" id="pf149928068257727" referenceLink="//@navigationRule.20/@navigationCase.0/@toViewId|" outlinks="pf149928068257720 pf149928068257715 pf149928068257726 pf14992806825776" inlinks="pf149928068257725 pf14992806825773 pf149928068257711" path="/pages/newPatient.xhtml"/>
+  <links id="pf14992806825771" target="pf14992806825778" source="pf14992806825770" outcome="success" redirect="true" fromaction="#{updatePatient.save}"/>
+  <links id="pf149928068257712" target="pf14992806825778" source="pf149928068257717" outcome="success" redirect="true" fromaction="#{loginBean.login}"/>
+  <links id="pf14992806825779" target="pf149928068257717" source="pf14992806825778" outcome="success" redirect="true" fromaction="#{navigationBean.logout}"/>
+  <links id="pf14992806825772" target="pf149928068257717" source="pf14992806825770" outcome="success" redirect="true" fromaction="#{navigationBean.logout}"/>
+  <links id="pf149928068257713" target="pf14992806825778" source="pf149928068257722" outcome="success" redirect="true" fromaction="#{registrierungBean.registrieren}"/>
+  <links id="pf149928068257719" target="pf149928068257717" source="pf149928068257722" outcome="success" redirect="true" fromaction="#{registrierungBean.login}"/>
+  <links id="pf149928068257714" target="pf14992806825778" source="pf149928068257724" outcome="success" redirect="true" fromaction="#{navigationBean.meinePatienten}"/>
+  <links id="pf149928068257725" target="pf149928068257727" source="pf149928068257724" outcome="success" redirect="true" fromaction="#{navigationBean.neuerPatient}"/>
+  <links id="pf14992806825775" target="pf14992806825770" source="pf149928068257724" outcome="success" redirect="true" fromaction="#{aerzteBean.updatePatient}"/>
+  <links id="pf149928068257710" target="pf149928068257724" source="pf14992806825778" outcome="success" redirect="true" fromaction="#{navigationBean.aerzte}"/>
+  <links id="pf149928068257723" target="pf149928068257724" source="pf149928068257722" outcome="success" redirect="true" fromaction="#{navigationBean.aerzte}"/>
+  <links id="pf14992806825773" target="pf149928068257727" source="pf14992806825770" outcome="success" fromaction="#{navigationBean.neuerPatient}"/>
+  <links id="pf14992806825774" target="pf149928068257724" source="pf14992806825770" outcome="success" redirect="true" fromaction="#{navigationBean.aerzte}"/>
+  <links id="pf149928068257720" target="pf149928068257717" source="pf149928068257727" outcome="success" fromaction="#{navigationBean.logout}"/>
+  <links id="pf149928068257715" target="pf14992806825778" source="pf149928068257727" outcome="success" fromaction="#{neuerPatientBean.save}"/>
+  <links id="pf149928068257726" target="pf149928068257724" source="pf149928068257727" outcome="success" redirect="true" fromaction="#{navigationBean.aerzte}"/>
+  <links id="pf14992806825776" target="pf14992806825770" source="pf149928068257727" outcome="success" redirect="true" fromaction="#{navigationBean.updatePatient}"/>
+  <links id="pf149928068257721" target="pf149928068257717" source="pf149928068257724" outcome="success" redirect="true" fromaction="#{navigationBean.logout}"/>
+  <links id="pf149928068257718" target="pf149928068257724" source="pf149928068257717" outcome="success" fromaction="#{navigationBean.aerzte}"/>
+  <links id="pf149928068257711" target="pf149928068257727" source="pf14992806825778" outcome="success" redirect="true" fromaction="#{navigationBean.neuerPatient}"/>
+  <links id="pf14992806825777" target="pf14992806825770" source="pf14992806825778" outcome="success" fromaction="#{meinePatienten.bearbeiten}"/>
+  <links id="pf149928074325028" target="pf149928068257722" source="pf149928068257717" outcome="success" redirect="true" fromaction="#{loginBean.registrieren}"/>
+</pageflow:Pageflow>

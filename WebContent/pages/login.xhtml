@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+
+<h:head>
+	<title></title>
+</h:head>
+<h:body>
+
+	<h:form>
+		<ul id="menu">
+			<li><h:commandLink action="#{navigationBean.meinePatienten}" value="Meine Patienten" /></li>
+			<li><h:commandLink action="#{navigationBean.neuerPatient}" value="Neuer Patient" /></li>
+			<li><h:commandLink action="#{navigationBean.aerzte}" value="Ärzte" /></li>
+			<li><h:commandLink action="#{navigationBean.logout}" value="Login" /></li>
+		</ul>
+	</h:form>
+	
+	<h3>Bitte loggen Sie sich ein</h3>
+	<h:form id="login-form">
+		<h:outputText value="Email:" />
+		 <h:inputText value="#{loginBean.email}" id="email">
+		 <f:validator validatorId="arztNotExistValidator"/>
+			<f:validator validatorId="EmailValidator"/>
+			
+      	
+      		<f:attribute name="email" value="#{loginBean.email}" />
+		</h:inputText>
+		<h:message for="email" id="emailMessage" style="color:red"/>
+
+		<br />
+		<h:outputText value="Passwort:" />
+		<h:inputSecret value="#{loginBean.passwort}" id="password" />
+		<br />
+		<h:commandButton id="button" value="Login" action="#{loginBean.login}" />
+		<br />
+		<div>Noch nicht registriert?</div>
+		<h:commandButton id="registrierenButton"
+			action="#{loginBean.registrieren}" value="Registrieren" />
+		<br />
+
+	</h:form>
+</h:body>
+</html>

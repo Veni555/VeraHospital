@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:head>
+		<title>Navigation</title>
+		<meta http-equiv="Content-Type"	content="application/xhtml+xml; charset=UTF-8" />
+	</h:head>
+	<h:body>
+		<ui:composition template="navigation.xhtml">
+			<h:form>	
+				<ul id="menu">
+					<li><h:commandLink action="#{navigationBean.meinePatienten}" value="Meine Patienten" /></li>
+					<li><h:commandLink action="#{navigationBean.neuerPatient}" value="Neuer Patient" /></li>
+					<li><h:commandLink action="#{navigationBean.aerzte}" value="Ärzte" /></li>
+					<li><h:commandLink action="#{navigationBean.logout}" value="Logout" /></li>
+				</ul>
+			</h:form>
+		</ui:composition>
+	</h:body>
+</html>
